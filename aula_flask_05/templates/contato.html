@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<h1>Contato</h1>
+<form method="post" action="{{url_for('enviar')}}">
+    <div class="row">
+        <div class="col-md-6">
+            <label>Nome</label>
+            <input type="text" class="form-control" name="nome">
+        </div>
+        <div class="col-md-6">
+            <label>E-mail</label>
+            <input type="email" class="form-control" name="email">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label>Mensagem</label>
+            <textarea class="form-control" name="msg"></textarea>
+        </div>
+    </div>
+    <p>Selecione a sua satisfação</p>
+    <input type="radio" name="satisfacao" value="Ruim">
+    <label>Ruim</label>
+    <input type="radio" name="satisfacao" value="Indiferente">
+    <label>Indiferente</label>
+    <input type="radio" name="satisfacao" value="Bom">
+    <lable>Bom</lable>
+    <div class="row text-center">
+        <input type="submit" class="btn btn-primary" value="Enviar">
+    </div>
+</form>
+{% endblock %}

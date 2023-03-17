@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{escola}}</h1>
+<p>Professor: {{professor}}</p>
+<p>Coordenadora: {{coordenadora}}</p>
+<p>Alunos:</p>
+<ul>
+{% for aluno in alunos %}
+    <li>{{aluno}}</li>
+{% endfor %}
+</ul>   
+{% endblock %}

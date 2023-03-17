@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<h1>Contato</h1>
+<form method="post">
+    {{ form.hidden_tag() }}
+    <div class="row">
+        <div class="col-md-6">
+            {{ form.nome.label }}
+            {{ form.nome(class_="form-control") }}
+        </div>
+        <div class="col-md-6">
+            {{ form.email.label }}
+            {{ form.email(class_="form-control") }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{ form.msg.label }}
+            {{ form.msg(class_="form-control") }}
+        </div>
+    </div>
+    <div class="row text-center">
+        {{ form.submit(class_="btn btn-primary") }}
+    </div>
+</form>
+{% endblock %}

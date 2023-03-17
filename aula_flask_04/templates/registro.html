@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" action="{{url_for('processa_registro')}}">
+        <div class="row">
+            <div class="col-md-4">
+                <label>Nome</label>
+                <input type="text" name="nome" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <label>E-mail</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <label>Senha</label>
+                <input type="password" name="senha" class="form-control" required>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-12 text-center">
+                <input type="submit" value="Cadastrar">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

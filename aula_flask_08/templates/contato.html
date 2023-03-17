@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="row">
+        <div class="col-md-6">
+            {{ form.assunto.label }}
+            {{ form.assunto(class_="form-control") }}
+        </div>
+        <div class="col-md-6">
+            {{ form.remetente.label }}
+            {{ form.remetente(class_="form-control") }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{ form.mensagem.label }}
+            {{ form.mensagem(class_="form-control") }}
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-12 text-center">
+            {{ form.submit(class_="btn btn-primary") }}
+        </div>
+    </div>
+</form>
+{% endblock %}

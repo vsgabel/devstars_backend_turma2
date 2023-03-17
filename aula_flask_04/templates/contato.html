@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Contato</h1>
+    <form method="GET" action="{{url_for('processa_contato')}}">
+        <div class="row">
+            <div class="col-md-6">
+                <label>Nome</label>
+                <input type="text" class="form-control" name="nome"/>
+            </div>
+            <div class="col-md-6">
+                <label for="">E-mail</label>
+                <input type="email" class="form-control" name="email"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label>Mensagem</label>
+                <textarea class="form-control" name="msg"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-primary" value="Enviar"/>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

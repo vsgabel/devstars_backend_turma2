@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for aluno in alunos %}
+    <p>{{aluno.nome}}</p>
+{% endfor %}
+{% endblock %}
