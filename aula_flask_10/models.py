@@ -7,6 +7,9 @@ class Motorista(db.Model):
     carros = db.relationship('Carro', backref="dono")
     multas = db.relationship('Multa', backref="motorista")
 
+    def __str__(self):
+        return self.nome
+
 class Carro(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     fabricante = db.Column(db.String(32), nullable=False)
@@ -14,6 +17,9 @@ class Carro(db.Model):
     placa = db.Column(db.String(8), nullable=False, unique=True)
     dono_id = db.Column(db.Integer, db.ForeignKey("motorista.id"))
     multas = db.relationship('Multa', backref="carro")
+
+    def __str__(self):
+        return f"{self.placa} - {self.fabricante} {self.modelo}"
 
 class Multa(db.Model):
     id = db.Column(db.Integer, primary_key=True)
