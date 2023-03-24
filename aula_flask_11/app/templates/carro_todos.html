@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Dono</th>
+            <th>Fabricante</th>
+            <th>Modelo</th>
+            <th>Placa</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for dado in dados %}
+        <tr>
+            <td>{{ dado.id }}</td>
+            <td>{{ dado.dono.nome }}</td>
+            <td>{{ dado.fabricante }}</td>
+            <td>{{ dado.modelo }}</td>
+            <td>{{ dado.placa }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+{% endblock %}

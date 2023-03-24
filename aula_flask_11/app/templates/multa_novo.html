@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="row">
+        <div class="col-md-6">
+            {{ form.valor.label}}
+            {{ form.valor(class_="form-control")}}
+        </div>
+        <div class="col-md-6">
+            {{ form.motivo.label}}
+            {{form.motivo(class_="form-control")}}
+        </div>      
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {{ form.pontos.label}}
+            {{ form.pontos(class_="form-control")}}
+        </div>
+        <div class="col-md-6">
+            {{ form.gravidade.label}}
+            {{ form.gravidade(class_="form-control")}}
+        </div>   
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {{ form.motorista.label}}
+            {{ form.motorista(class_="form-control")}}
+        </div>
+        <div class="col-md-6">
+            {{ form.carro.label}}
+            {{ form.carro(class_="form-control")}}
+        </div>  
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{ form.submit(class_="btn-primary") }}
+        </div>    
+    </div>
+</form>
+
+{% endblock %}
