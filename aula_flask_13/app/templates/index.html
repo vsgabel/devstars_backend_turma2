@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if usr %}
+<p>Oi, {{usr}}</p>
+{% else %}
+<p>Oi, anônimo</p>
+{% endif %}
+{% endblock %}

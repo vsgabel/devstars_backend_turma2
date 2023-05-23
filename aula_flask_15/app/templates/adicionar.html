@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    <div class="row">
+        <div class="col-md-8">
+            
+                {{ form.hidden_tag() }}
+                {{ form.nome.label }}
+                {{ form.nome(class_="form-control")}}
+                <br>
+                {{ form.cpf.label }}
+                {{ form.cpf(class_="form-control")}}
+        </div>
+        <div class="col-md-4">
+            {{ form.submit(class_="btn btn-primary") }}
+        </div>
+    </div>
+</form>
+{% endblock %}

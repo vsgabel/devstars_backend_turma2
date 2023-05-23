@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for paciente in lista %}
+                    <tr>
+                        <td>{{ paciente.id }}</td>
+                        <td>{{ paciente.nome }}</td>
+                        <td>{{ paciente.cpf }}</td>^
+                        <td><a class="btn btn-danger btn-icon" href="{{ url_for('pac.remover', id=paciente.id) }}">X</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

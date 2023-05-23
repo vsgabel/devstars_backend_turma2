@@ -1,0 +1,6 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>{{form.usuario.label}}{{form.usuario()}}</p>
+    <p>{{form.senha.label}}{{form.senha()}}</p>
+    <p>{{form.submit()}}</p>
+</form>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="row">
+        <div class="col-md-6">
+            {{ form.usuario.label }}
+            {{ form.usuario(class_="form-control")}}
+        </div>
+        <div class="col-md-6">
+            {{ form.senha.label }}
+            {{ form.senha(class_="form-control")}}
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-3 text-center">
+            {{ form.submit(class_="btn btn-primary btn-block") }}
+        </div>
+    </div>
+</form>
+{% endblock %}
